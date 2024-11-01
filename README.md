@@ -1,42 +1,38 @@
 Project Overview
-This project implements a Generative Adversarial Network (GAN) to denoise images from the CIFAR-10 dataset. The model adds Gaussian noise to images, 
-and the generator learns to reconstruct the original clean images from the noisy ones. The discriminator evaluates the authenticity of the denoised images,
-distinguishing between real and generated images.
-
-Introduction
-Image denoising is crucial in image processing tasks to restore original, clean images from noisy data.
-This project explores the use of GANs to remove noise from images by using the CIFAR-10 dataset. The GAN is composed of:
-
-A Generator that generates clean images from random noise.
-A Discriminator that distinguishes between original clean images and denoised images.
+This project applies a Generative Adversarial Network to restore noisy images in the CIFAR-10 dataset. The model injects some Gaussian noise to the image,
+and the generator would learn to restore the clean original images from the noise. To validate the power of the generator, it has to cross-check from the
+discriminator that whether those images are actual or are generated.
+The paper on this research will explore the uses of GANs while restoring noisy images based on CIFAR-10. GAN divides into
+A generator that will generate clean images from noising.
+A discriminator that will differentiate between clean original images and noisy images.
 
 Dataset
-The CIFAR-10 dataset consists of 60,000 32x32 color images in 10 different classes, with 50,000 training images and 10,000 test images. 
-For this project, Gaussian noise is added to the images to simulate noisy inputs.
+This dataset consists of 60,000 32x32 color images in ten classes with 50,000 training images and 10,000 testing images.
+Noisy inputs for this project are simulated by adding Gaussian noise to the images.
 
-Prerequisites
+Requirements
 To run this project, you will need:
 Python 3.7 or higher
 TensorFlow 2.x
 NumPy
 Matplotlib
 
-Installation
+Setup
 Clone the repository:
-git clone https://github.com/yourusername/cifar10_denoising_gan.git
-cd cifar10_denoising_gan
+ git clone https://github.com/yourusername/cifar10_denoising_gan.git
+ cd cifar10_denoising_gan
 
-Install the required dependencies:
-pip install -r requirements.txt
+Install required dependencies:
+ pip install -r requirements.txt
 
 How to Run
-Train the GAN: Run the following command to start training the GAN on noisy CIFAR-10 images.
-python gan.py
-Evaluate the GAN: After training, you can evaluate the model on test images and visualize the results:
-python evaluate.py
+Train the GAN: To train the GAN on noisy CIFAR-10 images, you should run.
+ python gan.py
+Evaluate the GAN: After the training has finished, you can evaluate the model on test images and visualize the results:
+ python evaluate.py
 
 Results
-During the training, the generator learns to reconstruct denoised images from the noisy inputs. Here's a sample of the results:
+In the training process, the generator learns to reconstruct the denoised images from the noisy inputs. Some sample results are as follows:
 Noisy Image vs. Denoised Image vs. Original Image
 
 References
